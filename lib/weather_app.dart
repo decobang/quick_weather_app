@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
@@ -11,7 +10,6 @@ import 'package:quick_weather_app/CUSTOM_WIDGETS/search_bar_widget.dart';
 import 'package:quick_weather_app/CUSTOM_WIDGETS/weather_info_widget.dart';
 import 'package:quick_weather_app/CUSTOM_WIDGETS/weekly_forcast_widget.dart';
 
-
 class WeatherAppImproved extends StatefulWidget {
   const WeatherAppImproved({super.key});
 
@@ -20,10 +18,9 @@ class WeatherAppImproved extends StatefulWidget {
 }
 
 class _WeatherAppImprovedState extends State<WeatherAppImproved> {
-  
   String apiKey = ""; // Add your API key here from OpenWeatherMap.org
 
-  // initialize variables 
+  // initialize variables
   String weatherData = "Loading...";
   String city = "Brentwood";
   late String wind = '';
@@ -58,7 +55,6 @@ class _WeatherAppImprovedState extends State<WeatherAppImproved> {
 
 // fetchWeather function that takes in a city and returns the weather data
   fetchWeather(String city) async {
-
     var response = await http.get(Uri.parse(
         'https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey'));
 
@@ -124,7 +120,6 @@ class _WeatherAppImprovedState extends State<WeatherAppImproved> {
     });
   }
 
-
   // build function that builds the app and returns the UI
   @override
   Widget build(BuildContext context) {
@@ -142,7 +137,9 @@ class _WeatherAppImprovedState extends State<WeatherAppImproved> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SearchBarWidget(fetchWeatherCallback: updateCity), // calls the SearchBarWidget
+                  SearchBarWidget(
+                      fetchWeatherCallback:
+                          updateCity), // calls the SearchBarWidget
                   Expanded(
                     child: SingleChildScrollView(
                       child: Wrap(

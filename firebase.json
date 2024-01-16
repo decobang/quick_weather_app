@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "quickweather",
     "public": "build/web",
     "ignore": [
       "firebase.json",
