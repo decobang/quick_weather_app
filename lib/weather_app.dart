@@ -21,7 +21,7 @@ class WeatherAppImproved extends StatefulWidget {
 
 class _WeatherAppImprovedState extends State<WeatherAppImproved> {
   
-  String apiKey = "dedfb27c6d465bfa57c85068a0b9a9d2"; // Add your API key here from OpenWeatherMap.org
+  String apiKey = ""; // Add your API key here from OpenWeatherMap.org
 
   // initialize variables 
   String weatherData = "Loading...";
